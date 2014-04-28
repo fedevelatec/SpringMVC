@@ -1,13 +1,13 @@
-package com.fedevela.springmvc.dao;
+package com.fedevela.springmvc.service;
 
 /**
  * Created by fvelazquez on 28/04/14.
  */
-import java.util.List;
-
 import com.fedevela.springmvc.model.Team;
 
-public interface  TeamDAO {
+import java.util.List;
+
+public interface TeamService {
     public void addTeam(Team team);
     public void updateTeam(Team team);
     public Team getTeam(int id);
