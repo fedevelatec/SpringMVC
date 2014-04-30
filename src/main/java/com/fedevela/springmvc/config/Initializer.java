@@ -14,16 +14,19 @@ public class Initializer extends
 
     @Override
     protected Class<?>[] getRootConfigClasses() {
+        System.out.println("Initializer -> getRootConfigClasses:  Inicio");
         return new Class[] {DatabaseConfig.class };
     }
 
     @Override
     protected Class<?>[] getServletConfigClasses() {
+        System.out.println("Initializer -> getServletConfigClasses:  Inicio");
         return new Class<?>[] { WebAppConfig.class };
     }
 
     @Override
     protected String[] getServletMappings() {
+        System.out.println("Initializer -> getServletMappings:  Inicio");
         return new String[] { "/" };
     }
 

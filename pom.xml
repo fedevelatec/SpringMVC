@@ -181,7 +181,12 @@
             <artifactId>jstl</artifactId>
             <version>${jstl-version}</version>
         </dependency>
-
+        <!-- UTILS -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.3.2</version>
+        </dependency>
         <!-- ORACLE -->
         <dependency>
             <groupId>com.oracle</groupId>
@@ -216,15 +221,22 @@
     </repositories>
     <build>
         <finalName>SpringMVC</finalName>
-        <!--plugins>
-            <plugin>
+        <plugins>
+            <!--plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>2.3.2</version>
                 <configuration>
                     <source>1.7</source>
                     <target>1.7</target>
                 </configuration>
+            </plugin-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <configuration>
+                    <failOnMissingWebXml>false</failOnMissingWebXml>
+                </configuration>
             </plugin>
-        </plugins-->
+        </plugins>
     </build>
 </project>
